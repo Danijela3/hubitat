@@ -1,0 +1,86 @@
+.gallery {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+
+    @include respond-to("large") {
+        padding-top: 120px;
+    padding-bottom: 95px;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 20px;
+      
+
+        @include respond-to("large") {
+            margin-bottom: 100px;
+        }
+
+
+        h2 {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 34px;
+            color: $label-green;
+
+            @include respond-to("small") {
+                font-size: 42px;
+                line-height: 50px;
+            }
+
+            @include respond-to("large") {
+                font-size: 66px;
+            line-height: 68px;
+            }
+    
+        }
+    }
+
+    .slick-list {
+        padding: 0 70px  !important; 
+
+        @include respond-to("medium") {
+            padding: 0 180px !important;
+        }
+    }
+
+    /* the slides */
+    .slick-slide {
+        margin: 0 10px;
+        transition: opacity 0.4s ease-out;
+
+        @include respond-to("medium") {
+            margin: 0 20px;
+        }
+
+        @include respond-to("large") {
+            margin: 0 35px;
+            // max-width: 950px !important;
+        }
+
+        @include respond-to("xlarge") {
+          width: 80%;
+            max-width: 1100px !important;
+        }
+
+        &:not(.slick-center) {
+            opacity: 0.2;
+        }
+
+    }
+
+    /* the parent */
+    .slick-list {
+        margin: 0 -15px;
+
+        @include respond-to("medium") {
+            margin: 0 -35px;
+        }
+
+       
+    }
+
+}

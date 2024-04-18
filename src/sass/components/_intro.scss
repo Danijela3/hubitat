@@ -1,0 +1,12 @@
+.intro-text{
+    margin:50px 0 30px 0;
+
+    @include respond-to( 'small') {
+        display: grid;
+       grid-template-columns: 1fr 1fr;
+       column-gap: 7rem;
+       margin:15rem 0 8rem 0;
+    }
+    &__left{}
+    &__right{}
+}

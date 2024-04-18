@@ -1,0 +1,27 @@
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    @include center-block;
+    @include respond-to('medium') {
+        max-width: 970px;
+    }
+    @include respond-to('large') {
+        max-width: 1180px;
+    }
+    @include respond-to('xlarge') {
+        max-width: 1320px;
+    }
+    &-wide {
+        padding-left: 20px;
+        padding-right: 20px;
+        @include center-block;
+        @include respond-to('medium') {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        @include respond-to('xlarge') {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
+}

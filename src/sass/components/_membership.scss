@@ -1,0 +1,96 @@
+.membership {
+
+    @include respond-to("small") {
+        padding-top: 350px;
+    padding-bottom: 165px;
+        }
+
+    @include respond-to("medium") {
+        padding-top: 180px;
+    padding-bottom: 165px;
+        }
+
+    @include respond-to("large") {
+    
+    }
+
+     
+    &__card {
+        background-color: white;
+        border-radius: 18px;
+        margin-bottom: 20px;
+        padding: 60px;
+        display: flex;
+        align-items: center;
+        gap: 54px;
+
+
+    }
+
+    &__photo {
+        width: 50%;
+    }
+
+    &__content {
+        width: 50%;
+    }
+
+    &__items {
+        @include respond-to("large") {
+            margin-top: 100px;
+        }
+    }
+
+    &__paragraph {
+        margin-top: 36px;
+        margin-bottom: 32px;
+
+    }
+
+    &__paragraph-divider {
+        margin-bottom: 20px;
+    }
+
+    &__card-heading {
+        display: flex;
+    justify-content: space-between;
+    align-items: end;
+    
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 32px;
+        color: $primary;
+        margin-right: 6px;
+    }
+
+    .paragraph-regular {
+        color: $paragraph-on-light;
+        max-width: 600px;
+        margin: 0 auto;
+
+       
+        
+        
+    }
+
+    .h2 {
+        max-width: 300px;
+        margin-bottom: 0;
+    }
+
+    &__payment {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 19px;
+        color: $primary;
+    }
+
+    &__heading {
+        @include respond-to("medium") {
+        margin-bottom: 60px;
+        }
+    }
+}

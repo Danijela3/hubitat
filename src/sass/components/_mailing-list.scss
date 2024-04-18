@@ -1,0 +1,99 @@
+.mailing-list {
+    padding: 115px 0;
+
+    @include respond-to("small") {
+        padding: 115px 40px;
+    }
+
+    &__flex {
+
+        @include respond-to("medium") {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+    }
+
+    &__flex-item-left {
+        max-width: 509px;
+
+        h4 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 24px;
+            color: $title-green;
+        }
+    }
+
+    &__flex-item-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 23px;
+        border-bottom: 2px solid #234930;
+        margin-top: 30px;
+
+        @include respond-to("small") {
+            width: 646px;
+        }
+
+        @include respond-to("medium") {
+            margin-top: 0;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 36px;
+            color: $title-green;
+            margin-bottom: 0;
+
+        }
+
+        input {
+            border: none;
+            background-color: $background;
+            padding: 13px 0;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 500;
+            width: 100%;
+
+            &:focus-within {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $primary;
+                font-size: 36px;
+                line-height: 36px;
+            }
+
+            &::-webkit-input-placeholder {
+                /* Chrome/Opera/Safari */
+                color: $primary;
+            }
+
+            &::-moz-placeholder {
+                /* Firefox 19+ */
+                color: $primary;
+            }
+
+            &:-ms-input-placeholder {
+                /* IE 10+ */
+                color: $primary;
+            }
+
+            &:-moz-placeholder {
+                /* Firefox 18- */
+                color: $primary;
+            }
+
+
+        }
+
+
+    }
+}

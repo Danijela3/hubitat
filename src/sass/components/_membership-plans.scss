@@ -1,0 +1,132 @@
+.membership-plans {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include respond-to("medium") {
+        padding-top: 120px;
+    }
+
+    &__flex {
+
+        @include respond-to("medium") {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+
+        h2 {
+
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 50px;
+            color: $title-green;
+
+            @include respond-to("medium") {
+                font-size: 66px;
+                line-height: 68px;
+            }
+        }
+
+    }
+
+    &__flex-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include respond-to("large") {
+            gap: 32px;
+        }
+    }
+
+    &__flex-items p {
+        color: $paragraph-green;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .btn__primary-orange {
+
+        a {
+            font-size: 18px;
+            font-weight: 500;
+            color: $title-green;
+        }
+    }
+
+    &__grid {
+
+        margin-top: 40px;
+
+        @include respond-to("small") {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 26px;
+        }
+
+        @include respond-to("medium") {
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            margin-top: 100px;
+            margin-bottom: 125px;
+        }
+    }
+
+    &__grid-items {
+
+
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        border: $border-color;
+        border-radius: 14px;
+        padding: 19px;
+
+        @include respond-to("small") {
+            // margin-right: 20px;
+        }
+
+        @include respond-to("medium") {
+            margin-bottom: 0;
+            margin-right: 0;
+        }
+
+
+
+    }
+
+    &__card-heading {
+        text-transform: uppercase;
+        color: $title-green;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 22px;
+
+    }
+
+    .btn__primary-border {
+        text-align: center;
+        margin-top: auto;
+
+    }
+
+    &__grid-photo {
+        width: 100%;
+
+        img {
+            display: flex;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    &__light-text {
+        margin-bottom: 28px;
+    }
+}

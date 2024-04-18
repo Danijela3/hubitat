@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+// .footer {
+//     padding: 25px 0;
+//     @include respond-to("medium") {
+//         padding: 3rem 0;
+//     }
+//     &__row {
+//         text-align: center;
+//     }
+
+//     &__copyright {
+//         margin-bottom: 0;
+//         @extend .small-text;
+//         color: #121212;
+//     }
+// }
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-top: $border-color;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+
+    &__mail-and-address {
+        display: flex;
+        gap: 122px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        padding-top: 80px;
+        a {
+            margin-right: 27px;
+            white-space: nowrap;
+        }
+    }
+
+    &__grid-column {
+        img {
+            margin-right: 30px;
+        }
+    }
+
+    &__copyright-p {
+       
+    }
+
+    &__grid-column1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+}

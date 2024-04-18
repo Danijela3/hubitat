@@ -1,0 +1,79 @@
+.coworking-space {
+   
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include respond-to("small") {
+        padding: 70px 0;
+    }
+
+    @include respond-to("large") {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    h2 {
+        color: $title-green;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 52px;
+        margin-bottom: 30px;
+        max-width: 1017px;
+
+        @include respond-to("small") {
+            font-size: 63px;
+       line-height: 72px;
+       margin-bottom: 48px;
+        }
+
+        @include respond-to("large") {
+            font-size: 86px;
+            line-height: 92px;
+        }
+    }
+
+    &__flex {
+        @include respond-to("small") {
+        display: flex;
+        gap: 35px;
+        }
+
+        @include respond-to("medium") {
+            display: flex;
+            gap: 76px;
+            }
+
+    }
+
+    .container {
+
+        @include respond-to("large") {
+    padding-left: 170px;
+    // margin-left: 0;
+    // margin-right: auto;
+    }
+}
+
+    &__flex-left {
+        max-width: 483px;
+    }
+
+    &__flex-right {
+
+        margin-top: 40px;
+        max-width: 405px;
+
+        @include respond-to("small") {
+            margin-top: 0;
+        }
+
+    }
+
+    &__button {
+margin-top: 30px;
+        @include respond-to("large") {
+        margin-top: 58px;
+        }
+    }
+
+}

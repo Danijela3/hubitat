@@ -1,0 +1,225 @@
+body {
+    font-family: $text-font;
+    // color: $text;
+    background-color: $background;
+    position: relative;
+    overflow-x: hidden;
+    @include fluid-type(320px, 1920px, 16px, 18px);
+    @include line-height(320px, 1920px, 22px, 24px);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 18px 0;
+    // font-family: $title-font;
+    line-height: 1.3;
+
+    // color: $title;
+    @include respond-to("small") {
+        margin: 0 0 2rem 0;
+    }
+
+    em {
+        color: $primary;
+        font-style: normal;
+    }
+
+    &.white {
+        em {
+            // color: $primary-ondark;
+        }
+    }
+}
+
+.text-white {
+    color: white;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: white;
+
+        em {
+            // color: $primary-ondark;
+        }
+    }
+
+    p,
+    li {
+        // color: $text-ondark;
+    }
+}
+
+p {
+    margin: 0 0 1.5rem 0;
+}
+
+h1 {
+    @include fluid-type(320px, 1920px, 30px, 40px);
+}
+
+h2,
+.h2 {
+    // @include fluid-type(320px, 1920px, 28px, 36px);
+    @include fluid-type(320px, 1920px, 72px, 72px);
+}
+
+h3,
+.h3 {
+    @include fluid-type(320px, 1920px, 22px, 28px);
+    margin-bottom: 2.4rem;
+}
+
+h4,
+.h4 {
+    @include fluid-type(320px, 1920px, 22px, 25px);
+
+}
+
+h5,
+.h5 {
+    @include fluid-type(320px, 1920px, 20px, 22px);
+
+}
+
+h6,
+.h6 {
+    @include fluid-type(320px, 1920px, 18px, 20px);
+    @include line-height(320px, 1920px, 20px, 24px);
+}
+
+.big-text {
+    @include fluid-type(320px, 1920px, 20px, 22px);
+    @include line-height(320px, 1920px, 26px, 28px);
+}
+
+.small-title {
+    @include fluid-type(320px, 1920px, 18px, 20px);
+    @include line-height(320px, 1920px, 20px, 24px);
+}
+
+.small-text {
+    @include fluid-type(320px, 1920px, 14px, 16px);
+    line-height: 1.3;
+}
+
+.paragraph-big {
+    font-weight: 500;
+    color: $paragraph-green;
+    font-size: 24px;
+    line-height: 30px;
+
+    @include respond-to("medium") {
+        font-size: 28px;
+    line-height: 32px;
+    }
+}
+
+.paragraph-small {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: $paragraph-green;
+}
+
+.paragraph-light-green {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    color: $text-light-green;
+}
+
+.paragraph-regular {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color: $paragraph-green;
+
+    @include respond-to("medium") {
+        margin-top: 50px;
+    }
+}
+
+.paragraph-semibold {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $label-green;
+}
+
+
+
+.testimonial {
+    
+          font-weight: 500;
+          font-size: 26px;
+           line-height: 30px; 
+          color: $title-green;
+          margin: 0 0 28px 0;
+
+          @include respond-to ("small") {
+            font-size: 30px;
+           line-height: 34px; 
+          }
+
+          @include respond-to ("medium") {
+            font-size: 42px;
+           line-height: 46px; 
+          }
+        
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $paragraph-green;
+}
+
+.big-paragraph {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $primary;
+}
+
+.h1,.h2 {
+    font-weight: 500;
+    color: $primary;
+
+   
+}
+
+.h1 {
+    font-size: 50px;
+    line-height: 55px;
+    @include respond-to("large") {
+        font-size: 100px;
+        line-height: 105px;
+    }
+}
+
+.h2 {
+    font-size: 30px;
+    line-height: 30px;
+    @include respond-to("large") {
+    font-size: 54px;
+    line-height: 54px;
+    }
+}
+
+.h3 {
+    font-size: 50px;
+    line-height: 52px;
+    font-weight: 500;
+    color: $primary;
+}

@@ -1,0 +1,99 @@
+ /* ============ MIXINS ============= */
+ 
+ // Center block
+ @mixin center-block {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ @mixin image-cover() {
+     position: relative;
+     overflow: hidden;
+     img {
+         position: absolute;
+         top: 50%;
+         bottom: 50%;
+         left: 50%;
+         right: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: auto;
+     }
+ }
+ 
+ @mixin cover() {
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+ }
+ 
+ // ------------ FLUID FONT SIZE  
+ @function strip-unit($value) {
+     @return $value / ($value * 0 + 1);
+ }
+ 
+ @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+     $u1: unit($min-vw);
+     $u2: unit($max-vw);
+     $u3: unit($min-font-size);
+     $u4: unit($max-font-size);
+     @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+         & {
+             font-size: $min-font-size;
+             @media screen and (min-width: $min-vw) {
+                 font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+             }
+             @media screen and (min-width: $max-vw) {
+                 font-size: $max-font-size;
+             }
+         }
+     }
+ }
+ 
+ @mixin line-height($min-vw, $max-vw, $min-font-size, $max-font-size) {
+     $u1: unit($min-vw);
+     $u2: unit($max-vw);
+     $u3: unit($min-font-size);
+     $u4: unit($max-font-size);
+     @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+         & {
+             line-height: $min-font-size;
+             @media screen and (min-width: $min-vw) {
+                 line-height: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+             }
+             @media screen and (min-width: $max-vw) {
+                 line-height: $max-font-size;
+             }
+         }
+     }
+ }
+ 
+ // ------------- RESPONSIVE 
+ @mixin respond-to($breakpoint) {
+     $raw-query: map-get($breakpoints, $breakpoint);
+     @if $raw-query {
+         $query: if(type-of($raw-query)=='string', unquote($raw-query), inspect($raw-query));
+         @media #{$query} {
+             @content;
+         }
+     }
+     @else {
+         @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
+     }
+ }
+ 
+ @mixin square($size, $radius: 0) {
+     width: $size;
+     height: $size;
+     @if $radius !=0 {
+         border-radius: $radius;
+     }
+ }
+ 
+ /// Helper to size an element
+ @mixin size($width, $height: $width) {
+     width: $width;
+     height: $height;
+ }
+ /* ============ END MIXINS ============= */

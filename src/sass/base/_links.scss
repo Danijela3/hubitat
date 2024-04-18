@@ -1,0 +1,14 @@
+/**
+ * Basic styles for links
+ */
+
+a {
+    color: $primary;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    &:hover,
+    &:active {
+        outline: 0;
+        text-decoration: none;
+    }
+}

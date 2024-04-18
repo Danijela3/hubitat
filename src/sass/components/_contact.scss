@@ -1,0 +1,133 @@
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include respond-to("large") {
+        padding-top: 90px;
+    padding-bottom: 90px;
+    }
+
+    h2 {
+        font-weight: 500;
+        color: $title-green;
+        margin-bottom: 60px;
+        font-size: 46px;
+        line-height: 48px;
+        @include respond-to("medium") {
+            font-size: 66px;
+            line-height: 68px;
+        }
+    }
+
+    input {
+        margin-bottom: 18px;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+
+        &:focus {
+        outline: 1px solid $primary;
+        }
+
+        @include fluid-type(320px, 1920px, 16px, 18px);
+    @include line-height(320px, 1920px, 22px, 24px);
+
+    }
+
+    label {
+        margin-bottom: 6px;
+
+    }
+
+    textarea {
+        min-height: 130px;
+        border: none;
+        border-radius: 6px;
+        padding: 10px;
+
+        &:focus {
+            outline: 1px solid $primary;
+            }
+
+            @include fluid-type(320px, 1920px, 16px, 18px);
+    @include line-height(320px, 1920px, 22px, 24px);
+    }
+
+    .btn__primary-border {
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .paragraph  {
+        margin-bottom: 0;
+        margin-left: 32px;
+
+        &:last-of-type {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__form {
+        
+
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        @include respond-to("medium") {
+        max-width: 499px;
+        }
+    }
+
+    &__button {
+        margin-top: 36px;
+        display: flex;
+
+    }
+
+    &__flex {
+
+        @include respond-to("small") {
+        display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 30px;
+        }
+        
+    }
+
+    &__location {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 16px;
+
+
+
+        p {
+            margin-bottom: 0;
+        }
+
+      
+
+        
+
+        &:last-of-type {
+            margin-bottom: 33px;
+        }
+    
+}
+
+&__contact-info {
+    margin-bottom: 33px;
+}
+
+&__flex-right {
+    margin-top: 25px;
+}
+
+&__location-social {
+    display: flex;
+    margin-top: 33px;
+    gap: 22px;
+}
+}

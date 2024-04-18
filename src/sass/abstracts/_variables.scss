@@ -1,0 +1,49 @@
+/*--------------------------------------------------------------
+# COLORS
+--------------------------------------------------------------*/
+
+$primary: #234930;
+$secondary:  #B6CD62;
+$background-light:  #CDDF87;
+$background:   #ECF3EF;
+$label-green:  #1C3D27;
+
+$paragraph-green:  #4C5D51;
+$title-green: #234930;
+$text-light-green: #AAC444;
+$border-color: 1px solid rgba(35, 73, 48, 0.3);
+$border-button: 1px solid $title-green;
+$primary-button:  #F8A13C;
+$paragraph-on-light:  #3D5B49;
+$stroke-color: 1px solid rgba(35, 73, 48, 0.5);
+
+
+
+
+
+// $primary-ondark: #1667DD;
+// $primary-hover:#0747A5;
+// $black:#0000;
+// $white:#ffff;
+// $background-dark:  #285637;
+// $text:#969696;
+// $text-ondark:#C7C7C7;
+// $title:#2F2E2E;
+// $warning:#F21313;
+// $warning-light:rgba(242, 19, 19, 0.1);
+
+
+
+/*--------------------------------------------------------------
+# RESPONSIVE BREAKPOINTS
+--------------------------------------------------------------*/
+
+$breakpoints: ( 'xsmall': (min-width: 576px), 'small': (min-width: 768px), 'medium': (min-width: 992px), 'large': (min-width: 1200px), 'xlarge': (min-width: 1440px));
+
+/*--------------------------------------------------------------
+# FONTS
+--------------------------------------------------------------*/
+
+$title-font:"Inter", sans-serif;
+$text-font:"Open Sans", sans-serif;
+

@@ -1,0 +1,9 @@
+.error-404{
+    padding: 40px 0;
+    @include respond-to("small") {
+        padding:9rem 0;
+    }
+    h1{
+        margin-bottom: 3rem;
+    }
+}

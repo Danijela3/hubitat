@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+// .button {
+//     padding: 6px 9px;
+//     display: inline-block;
+// }
+
+.btn {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 10px 20px;
+    min-width: 130px;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.25s ease-in-out;
+    &__primary-orange {
+        background: $primary-button;
+        padding: 10px 16px;
+        color: $title-green;
+       
+       
+        // &:hover {
+        //     background: $primary-hover;
+        // }
+    }
+    &__primary-border {
+        background: $background;
+        border: $border-button;
+        color: $primary;
+        padding: 10px 16px;
+       
+        // &:hover {
+        //     border: 1px solid $primary-hover;
+        //     background: $primary-hover;
+        //     color: white;
+        // }
+    }
+    &__white-border {
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 50px;
+
+        // &:hover {
+        //     background: $primary-hover;
+        //     color: white;
+        // }
+    }
+}
+
+.btns-grid {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    @include respond-to("small") {
+        gap: 20px;
+    }
+    &--center {
+        justify-content: center;
+    }
+}

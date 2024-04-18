@@ -1,0 +1,54 @@
+.two-col {
+    padding: 30px 20px;
+    background-color: $background;
+    margin: 40px 0;
+    background-image: url("../img/bg-left.png");
+    background-position: left top;
+    background-size: 90%;
+    background-repeat: no-repeat;
+
+    @include respond-to("small") {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 8rem 6rem;
+        margin: 8rem 0;
+    }
+    @include respond-to("medium") {
+        padding: 10rem;
+        background-size: 50%;
+    }
+    &.row-reverse {
+        background-image: url("../img/bg-right.png");
+        background-position: right top;
+        @include respond-to("small") {
+            flex-direction: row-reverse;
+        }
+    }
+    .col {
+        @include respond-to("small") {
+            flex: 1;
+            max-width: 48%;
+        }
+        @include respond-to("medium") {
+            max-width: 46%;
+        }
+    }
+    &__img {
+        text-align: center;
+    }
+    &__text {
+        padding-top: 25px;
+        @include respond-to("small") {
+            padding-top: 0;
+        }
+    }
+    .btns-grid {
+        margin-top: 24px;
+        column-gap: 14px;
+        @include respond-to("small") {
+            margin-top: 3rem;
+        }
+    }
+}

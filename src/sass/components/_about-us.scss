@@ -1,0 +1,70 @@
+.about-us {
+    margin-bottom: 14px;
+    background-image: linear-gradient(rgba(39, 39, 39, 0.3), rgba(39, 39, 39, 0.3)), url(/dist/img/img-home/hubitat-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 350px;
+    padding: 60px 0;
+   
+
+    @include respond-to("large") {
+        padding-top: 97px;
+    }
+
+    .container {
+
+        @include respond-to("medium") {
+        padding-left: 150px;
+        }
+    }
+
+    @include respond-to("small") {
+        // padding-left: 151px;
+    }
+
+    border-radius: 20px;
+
+    &__background-photo {
+
+
+        p {
+            color: white;
+            max-width: 423px;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: white;
+        width: 129px;
+        color: $label-green;
+        border-radius: 6px;
+        margin-bottom: 28px;
+        padding: 10px 12px;
+
+        h4 {
+            font-size: 24px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 0;
+
+        }
+    }
+
+    &__button {
+        margin-top: 32px;
+
+        .button {
+            padding: 10px 16px;
+        }
+    }
+
+
+}
