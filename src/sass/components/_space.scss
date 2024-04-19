@@ -131,12 +131,26 @@
     padding-bottom: 60px;
     padding-top: 60px;
     border-bottom: $stroke-color;
+
+    &:last-of-type {
+        border-bottom: 0;
+    }
 }
 
 &__content {
     max-width: 494px;
 }
 
+&__space {
+    display: flex;
+    flex-direction: column;
+    :nth-child(2) {
+        justify-content: end;
+    }
+    :nth-child(1) {
+        padding-top: 0;
+    }
+}
 .paragraph-regular {
     margin-top: 0;
 }

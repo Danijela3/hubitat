@@ -1,38 +1,40 @@
 .our-community {
     background-color: $primary;
     margin-top: -1px;
+    padding-top: 60px;
 
     @include respond-to("medium") {
         padding-top: 80px;
-    padding-bottom: 165px;
-        }
+        padding-bottom: 165px;
+    }
 
+    @include respond-to("large") {
+        padding-top: 98px;
+
+    }
+
+    .paragraph-regular {
+        max-width: 580px;
+        margin: 0 auto;
+        // margin-top: 56px;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+
+    &__description {
         @include respond-to("large") {
-            padding-top: 98px;
-        
-            }
-
-        .paragraph-regular {
-            max-width: 580px;
-            margin: 0 auto;
-            // margin-top: 56px;
-            margin-bottom: 30px;
-            color: white;
-        }
-
-
-        &__description {
-            @include respond-to("large") {
             margin-bottom: 80px;
-            }
         }
+    }
+
     .h1 {
         color: white;
         margin-bottom: 50px;
     }
 
     .slick-list {
-        padding: 0 70px  !important; 
+        padding: 0 70px !important;
 
         @include respond-to("medium") {
             padding: 0 180px !important;
@@ -58,7 +60,7 @@
         }
 
         @include respond-to("xlarge") {
-          width: 80%;
+            width: 80%;
             max-width: 1100px !important;
         }
 
@@ -76,10 +78,10 @@
             margin: 0 -35px;
         }
 
-       
+
     }
 
-    
+
 }
 
 .different {
@@ -91,8 +93,8 @@
     &__heading {
 
         @include respond-to("medium") {
-        display: flex;
-        justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
         }
     }
 
@@ -101,23 +103,29 @@
     }
 
     &__images {
+        display: flex;
+        gap: 20px;
+        align-items: end;
 
-       img { 
-        
+
+
+
+        img {
+
             display: flex;
-       }
-            
-        
-    
+        }
+
+
+
 
         @include respond-to("large") {
-        display: flex;
-        align-items: end;
-        gap: 124px;
+            display: flex;
+            align-items: end;
+            gap: 124px;
         }
     }
 
-    
+
 
     .h2 {
         max-width: 450px;
@@ -126,27 +134,79 @@
 
 
 .meet-coworkers {
-    &__grid {
+    margin-bottom: 60px;
+    @include respond-to("small") {
+    margin-bottom: 112px;
+    }
+
+    &__phantom-photo img {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        margin-bottom: 90px;
+
+        @include respond-to("medium") {
+            display: none;
+        }
+    }
+
+    &__grid {
+        margin-top: 50px !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @include respond-to("small") {
+        
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 70px;
+        }
+
+
+        @include respond-to("medium") {
+margin-top: 100px !important;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-bottom: 80px;
+        }
+
+        @include respond-to("large") {
+
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            margin-bottom: 90px;
+        }
     }
 
     &__button {
+
+        margin-top: 40px;
         display: flex;
         justify-content: center;
+        @include respond-to("small") {
+            margin-top: 90px;
+        }
     }
 }
 
 .community-perks {
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include respond-to("small") {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
     .perks__text {
         p {
             color: $paragraph-on-light;
         }
     }
 
-    padding-top: 100px;
-    padding-bottom: 80px;
+    .perks__item {
+        border-bottom: 1px solid #DCE8E1;
+    }
+
+    // padding-top: 100px;
+    // padding-bottom: 80px;
+
+
 }
 
 .dafed {
@@ -157,9 +217,14 @@
     padding-top: 40px;
 
     &__circle {
-        border-radius: 50%;
-        width: 690px;
-        height: 690px;
+        padding: 20px;
+
+        @include respond-to("small") {
+            border-radius: 50%;
+            width: 690px;
+            height: 690px;
+        }
+
         background-color: #F7E900;
         display: flex;
         justify-content: center;
@@ -182,33 +247,43 @@
 }
 
 .support {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     @include respond-to("large") {
         padding-top: 90px;
         padding-bottom: 90px;
-        
+
     }
 
     &__flex {
-        display: flex;
-        gap: 50px;
 
-        .paragraph-regular {
-            max-width: 400px;
+        @include respond-to("small") {
             display: flex;
-            margin-left: auto;
-            
-            margin-top: 146px;
+            gap: 50px;
+
+            .paragraph-regular {
+                max-width: 400px;
+                display: flex;
+                margin-left: auto;
+
+                margin-top: 146px;
+            }
         }
     }
+.paragraph-regular {
+    margin-bottom: 20px;
 
     
+}
+
 }
 
 .meet-coworkers {
     @include respond-to("large") {
         padding-top: 90px;
         padding-bottom: 90px;
-        
+
     }
 
     .paragraph {
@@ -223,13 +298,17 @@
 }
 
 .join-us {
-    height: 550px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 550px;
     background-color: $primary;
     display: flex;
     align-items: center;
     justify-content: center;
-position: relative;
-    .h2, .paragraph-regular {
+    position: relative;
+
+    .h2,
+    .paragraph-regular {
         color: white;
     }
 
@@ -245,20 +324,24 @@ position: relative;
     }
 
     &__top {
+display: none;
+        @include respond-to("medium") {
         position: absolute;
         bottom: 0;
         right: 0;
         display: flex;
+        }
     }
 
     &__bottom {
-      
-
+display: none;
+@include respond-to("medium") {
         position: absolute;
-top: 0;
-left: 0;
-            }
- 
+        top: 0;
+        left: 0;
+}
+    }
+
 
     .mailing-list {
         &__flex-item-right {
@@ -270,15 +353,15 @@ left: 0;
             border-bottom: 2px solid #234930;
             margin-top: 30px;
             cursor: pointer;
-        
+
             @include respond-to("small") {
                 width: 646px;
             }
-        
+
             @include respond-to("medium") {
                 margin-top: 0;
             }
-        
+
             p {
                 font-weight: 500;
                 font-size: 36px;
@@ -286,7 +369,7 @@ left: 0;
                 color: $title-green;
                 margin-bottom: 0;
             }
-        
+
             input {
                 border: none;
                 background-color: $background;
@@ -295,51 +378,51 @@ left: 0;
                 line-height: 36px;
                 font-weight: 500;
                 width: 100%;
-        
+
                 &:focus-within {
                     outline: none;
                 }
-        
+
                 &::placeholder {
                     color: $primary;
                     font-size: 36px;
                     line-height: 36px;
                 }
-        
+
                 &::-webkit-input-placeholder {
                     /* Chrome/Opera/Safari */
                     color: $primary;
                 }
-        
+
                 &::-moz-placeholder {
                     /* Firefox 19+ */
                     color: $primary;
                 }
-        
+
                 &:-ms-input-placeholder {
                     /* IE 10+ */
                     color: $primary;
                 }
-        
+
                 &:-moz-placeholder {
                     /* Firefox 18- */
                     color: $primary;
                 }
-        
+
             }
-        
+
             &:hover input::placeholder {
-                color:  #F8A13C; /* Placeholder text color on hover */
+                color: #F8A13C;
+                /* Placeholder text color on hover */
             }
-        
+
             &:hover .svg-button circle {
-                fill:  #F8A13C; /* SVG circle color on hover */
+                fill: #F8A13C;
+                /* SVG circle color on hover */
             }
         }
     }
-   
 
-    
+
+
 }
-
-

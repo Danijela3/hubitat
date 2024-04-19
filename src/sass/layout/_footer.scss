@@ -23,25 +23,39 @@
     border-top: $border-color;
 
     &__grid {
+
+        @include respond-to("small") {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include respond-to("small") {
+            gap: 70px;
+            }
         
     }
 
     &__mail-and-address {
+
+        @include respond-to("small") {
         display: flex;
         gap: 122px;
+        }
     }
 
     &__links {
+        margin-bottom: 20px;
         display: flex;
+        flex-direction: column;
+        @include respond-to("small") {
+       margin-bottom: 0;
         flex-direction: row;
         padding-top: 80px;
         a {
             margin-right: 27px;
             white-space: nowrap;
         }
-    }
+    }}
 
     &__grid-column {
         img {
@@ -57,9 +71,32 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 20px;
         p {
             margin-bottom: 0;
         }
+
+        @include respond-to("small") {
+            margin-bottom: 0;
+        }
+    }
+
+    &__address {
+        margin-bottom: 20px;
+        @include respond-to("small") {
+            margin-bottom: 0;
+        }
+    }
+
+    &__email {
+        margin-bottom: 20px;
+        @include respond-to("small") {
+            margin-bottom: 0;
+        }
+    }
+
+    .paragraph-regular {
+        margin-top: 0;
     }
 
 }
