@@ -3,9 +3,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    @include respond-to("small") {
-        padding: 70px 0;
-    }
+    
 
     @include respond-to("large") {
         padding-top: 110px;

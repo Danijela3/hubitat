@@ -12,6 +12,10 @@ display: none;
 
 
   &__hero-img {
+
+
+
+
     background-size: cover;
     background-position: bottom;
     padding-left: 20px;
@@ -24,10 +28,12 @@ display: none;
 
     @include respond-to("small") {
       min-height: 450px;
+      padding-left: 40px;
     }
 
     @include respond-to("medium") {
       min-height: 550px;
+      padding-left: 60px;
     }
 
     @include respond-to("large") {

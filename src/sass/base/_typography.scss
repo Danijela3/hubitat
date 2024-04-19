@@ -81,7 +81,7 @@ h3,
 
 h4,
 .h4 {
-    @include fluid-type(320px, 1920px, 22px, 25px);
+    @include fluid-type(320px, 1920px, 24px, 24px);
 
 }
 
@@ -192,7 +192,7 @@ h6,
     color: $primary;
 }
 
-.h1,.h2 {
+.h1,.h2, .h3, .h4 {
     font-weight: 500;
     color: $primary;
 
@@ -220,6 +220,6 @@ h6,
 .h3 {
     font-size: 50px;
     line-height: 52px;
-    font-weight: 500;
-    color: $primary;
+    
 }
+

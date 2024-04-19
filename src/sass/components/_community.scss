@@ -1,10 +1,16 @@
 .our-community {
     background-color: $primary;
+    margin-top: -1px;
 
     @include respond-to("medium") {
         padding-top: 80px;
     padding-bottom: 165px;
         }
+
+        @include respond-to("large") {
+            padding-top: 98px;
+        
+            }
 
         .paragraph-regular {
             max-width: 580px;
@@ -14,10 +20,65 @@
             color: white;
         }
 
+
+        &__description {
+            @include respond-to("large") {
+            margin-bottom: 80px;
+            }
+        }
     .h1 {
         color: white;
         margin-bottom: 50px;
     }
+
+    .slick-list {
+        padding: 0 70px  !important; 
+
+        @include respond-to("medium") {
+            padding: 0 180px !important;
+        }
+    }
+
+    /* the slides */
+    .slick-slide {
+        margin: 0 10px;
+        transition: opacity 0.4s ease-out;
+
+        img {
+            border-radius: 18px;
+        }
+
+        @include respond-to("medium") {
+            margin: 0 20px;
+        }
+
+        @include respond-to("large") {
+            margin: 0 35px;
+            // max-width: 950px !important;
+        }
+
+        @include respond-to("xlarge") {
+          width: 80%;
+            max-width: 1100px !important;
+        }
+
+        &:not(.slick-center) {
+            opacity: 0.2;
+        }
+
+    }
+
+    /* the parent */
+    .slick-list {
+        margin: 0 -15px;
+
+        @include respond-to("medium") {
+            margin: 0 -35px;
+        }
+
+       
+    }
+
     
 }
 
@@ -28,12 +89,32 @@
     border-radius: 18px;
 
     &__heading {
+
+        @include respond-to("medium") {
         display: flex;
         justify-content: space-between;
+        }
     }
 
     &__text {
         max-width: 650px;
+    }
+
+    &__images {
+
+       img { 
+        
+            display: flex;
+       }
+            
+        
+    
+
+        @include respond-to("large") {
+        display: flex;
+        align-items: end;
+        gap: 124px;
+        }
     }
 
     
@@ -147,7 +228,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+position: relative;
     .h2, .paragraph-regular {
         color: white;
     }
@@ -162,4 +243,103 @@
         margin-top: 20px;
         margin-bottom: 28px;
     }
+
+    &__top {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+    }
+
+    &__bottom {
+      
+
+        position: absolute;
+top: 0;
+left: 0;
+            }
+ 
+
+    .mailing-list {
+        &__flex-item-right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 23px;
+            border-bottom: 2px solid #234930;
+            margin-top: 30px;
+            cursor: pointer;
+        
+            @include respond-to("small") {
+                width: 646px;
+            }
+        
+            @include respond-to("medium") {
+                margin-top: 0;
+            }
+        
+            p {
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 36px;
+                color: $title-green;
+                margin-bottom: 0;
+            }
+        
+            input {
+                border: none;
+                background-color: $background;
+                padding: 13px 0;
+                font-size: 24px;
+                line-height: 36px;
+                font-weight: 500;
+                width: 100%;
+        
+                &:focus-within {
+                    outline: none;
+                }
+        
+                &::placeholder {
+                    color: $primary;
+                    font-size: 36px;
+                    line-height: 36px;
+                }
+        
+                &::-webkit-input-placeholder {
+                    /* Chrome/Opera/Safari */
+                    color: $primary;
+                }
+        
+                &::-moz-placeholder {
+                    /* Firefox 19+ */
+                    color: $primary;
+                }
+        
+                &:-ms-input-placeholder {
+                    /* IE 10+ */
+                    color: $primary;
+                }
+        
+                &:-moz-placeholder {
+                    /* Firefox 18- */
+                    color: $primary;
+                }
+        
+            }
+        
+            &:hover input::placeholder {
+                color:  #F8A13C; /* Placeholder text color on hover */
+            }
+        
+            &:hover .svg-button circle {
+                fill:  #F8A13C; /* SVG circle color on hover */
+            }
+        }
+    }
+   
+
+    
 }
+
+

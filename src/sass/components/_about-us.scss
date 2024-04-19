@@ -1,27 +1,27 @@
 .about-us {
     margin-bottom: 14px;
-    background-image: linear-gradient(rgba(39, 39, 39, 0.3), rgba(39, 39, 39, 0.3)), url(/dist/img/img-home/hubitat-hero.jpg);
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(rgba(39, 39, 39, 0.3), rgba(39, 39, 39, 0.3)), url(/dist/img/img-home/hubitat-hero.jpg) center/cover;
     min-height: 350px;
     padding: 60px 0;
-   
+
+    @include respond-to("medium") {
+        min-height: 594px;
+    }
 
     @include respond-to("large") {
         padding-top: 97px;
+        min-height: 694px;
+
     }
 
     .container {
 
         @include respond-to("medium") {
-        padding-left: 150px;
+            padding-left: 150px;
         }
     }
 
-    @include respond-to("small") {
-        // padding-left: 151px;
-    }
-
+  
     border-radius: 20px;
 
     &__background-photo {
@@ -41,7 +41,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         background-color: white;
         width: 129px;
         color: $label-green;
@@ -50,7 +49,7 @@
         padding: 10px 12px;
 
         h4 {
-            font-size: 24px;
+            
             text-align: center;
             font-weight: 500;
             margin-bottom: 0;
