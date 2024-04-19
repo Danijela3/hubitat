@@ -2,8 +2,8 @@
   &__h1 img {
 display: none;
     @include respond-to("small") {
-    padding-top: 36px;
-    padding-bottom: 39px;
+    padding-top: 40px;
+    padding-bottom: 25px;
     display: block;
     margin-top: 100px;
     }

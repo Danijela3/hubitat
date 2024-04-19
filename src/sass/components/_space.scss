@@ -1,4 +1,5 @@
 .working-space {
+    margin-top: -1px;
     background-color: $primary;
     @include respond-to("medium") {
         padding-top: 80px;
@@ -78,8 +79,11 @@
 }
 
 .location {
-    padding-top: 70px;
+    padding-top: 60px;
     padding-bottom: 14px;
+    @include respond-to("small") {
+        padding-top: 70px;
+    }
  &__flex {
     @include respond-to("large") {
     display: flex;
@@ -100,12 +104,16 @@
 
  .paragraph {
     max-width: 490px;
+margin-bottom: 34px;
+    @include respond-to("small") {
     margin-bottom: 64px;
+    }
  }
 
  &__photo {
     display: flex;
     justify-content: end;
+    margin-bottom: 30px;
 
     img {
         border-radius: 14px;
@@ -113,15 +121,24 @@
 }}
 
 .design {
+
+    padding-top: 60px;
+    padding-bottom: 60px;
 @include respond-to("large") {
     padding-top: 110px;
     padding-bottom: 100px;
 }
 
 &__heading {
+
+    margin-bottom: 50px;
+   
+
+    @include respond-to("medium") {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 110px;
+    }
 }
 
 &__items {
