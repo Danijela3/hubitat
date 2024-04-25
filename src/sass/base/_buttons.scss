@@ -30,13 +30,11 @@ input[type="submit"] {
         background: $primary-button;
         padding: 10px 16px;
         color: $title-green;
-      
-       
-        
-       
-        // &:hover {
-        //     background: $primary-hover;
-        // }
+        &:hover {
+            background: #EB751F;
+            color: $title-green !important;
+
+        }
     }
     &__primary-border {
         background: $background;
@@ -44,11 +42,12 @@ input[type="submit"] {
         color: $primary;
         padding: 10px 16px;
        
-        // &:hover {
-        //     border: 1px solid $primary-hover;
-        //     background: $primary-hover;
-        //     color: white;
-        // }
+        &:hover {
+            background: #EB751F;
+            color: $title-green !important;
+            border: 1px solid $hover-orange;
+
+        }
     }
     &__white-border {
         background: transparent;
@@ -56,10 +55,12 @@ input[type="submit"] {
         color: white;
         border-radius: 50px;
 
-        // &:hover {
-        //     background: $primary-hover;
-        //     color: white;
-        // }
+        &:hover {
+            background: #EB751F;
+            color: $title-green !important;
+            border: 1px solid $hover-orange;
+
+        }
     }
 }
 
@@ -74,4 +75,57 @@ input[type="submit"] {
     &--center {
         justify-content: center;
     }
+}
+
+.slick-prev {
+    rotate: 180deg;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(50%);
+    left: 20px;
+    width: 35px;
+    @include respond-to("small") {
+   width: 66px;
+   
+    
+    }
+    @include respond-to("medium") {
+        left: 120px;
+         
+         }
+
+         @include respond-to("xlarge") {
+            left: calc((100vw - 1100px) / 2 - 50px);
+             
+             }
+}
+
+.slick-next {
+    bottom: 50%;
+    right: 20px;
+    width: 35px;
+   
+    transform: translateY(50%);
+    position: absolute;
+    z-index: 1;
+    @include respond-to("small") {
+   width: 66px;
+    
+   
+    }
+    @include respond-to("medium") {
+        right: 120px;
+        
+         
+         }
+
+         @include respond-to("xlarge") {
+            right: calc((100vw - 1100px) / 2 - 50px);
+             
+             }
+}
+
+.slick-track {
+    position: relative;
 }

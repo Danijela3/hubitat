@@ -18,12 +18,38 @@
             margin-bottom: 100px;
         }
 
+        &:hover h2 {
+            color: $hover-orange;
+        }
+
+        &:hover .svg-button circle {
+            fill:  $hover-orange; /* SVG circle color on hover */
+           
+        }
+
+        &:hover path {
+            fill:$primary;
+        }
+
 
         h2 {
             font-weight: 500;
             font-size: 36px;
             line-height: 34px;
             color: $label-green;
+
+            // &:hover {
+            //     color: $hover-orange;
+
+                // .svg-button circle {
+                //     fill:  $hover-orange; /* SVG circle color on hover */
+                   
+                // }
+        
+                // path {
+                //     fill:$primary;
+                // }
+            
 
             @include respond-to("small") {
                 font-size: 42px;
@@ -35,7 +61,7 @@
             line-height: 68px;
             }
     
-        }
+        }}
     }
 
     .slick-list {
@@ -82,4 +108,3 @@
        
     }
 
-}

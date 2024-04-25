@@ -69,6 +69,11 @@
             max-width: 950px !important;
         }
 
+        @include respond-to("xlarge") {
+            margin: 0 60px;
+            max-width: 1300px !important;
+        }
+
         &:not(.slick-center) {
             opacity: 0.2;
         }

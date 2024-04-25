@@ -1,10 +1,17 @@
 .contact {
-    padding-top: 140px;
-    padding-bottom: 60px;
-    @include respond-to("large") {
-        // padding-top: 90px;
-    padding-bottom: 90px;
+    padding: 30px 0 40px;
+
+    @include respond-to("small") {
+        padding-top: 60px;
+        padding-bottom: 80px;
     }
+
+    @include respond-to("medium") {
+        padding-top: 90px;
+        padding-bottom: 165px;
+    }
+
+    @include respond-to("large") {}
 
     h2 {
         font-weight: 500;
@@ -12,6 +19,7 @@
         margin-bottom: 60px;
         font-size: 46px;
         line-height: 48px;
+
         @include respond-to("medium") {
             font-size: 66px;
             line-height: 68px;
@@ -25,11 +33,11 @@
         border-radius: 4px;
 
         &:focus {
-        outline: 1px solid $primary;
+            outline: 1px solid $primary;
         }
 
         @include fluid-type(320px, 1920px, 16px, 18px);
-    @include line-height(320px, 1920px, 22px, 24px);
+        @include line-height(320px, 1920px, 22px, 24px);
 
     }
 
@@ -46,10 +54,10 @@
 
         &:focus {
             outline: 1px solid $primary;
-            }
+        }
 
-            @include fluid-type(320px, 1920px, 16px, 18px);
-    @include line-height(320px, 1920px, 22px, 24px);
+        @include fluid-type(320px, 1920px, 16px, 18px);
+        @include line-height(320px, 1920px, 22px, 24px);
     }
 
     .btn__primary-border {
@@ -60,7 +68,7 @@
         line-height: 22px;
     }
 
-    .paragraph  {
+    .paragraph {
         margin-bottom: 0;
         margin-left: 32px;
 
@@ -70,13 +78,14 @@
     }
 
     &__form {
-        
+
 
         display: flex;
         flex-direction: column;
         max-width: 360px;
+
         @include respond-to("medium") {
-        max-width: 499px;
+            max-width: 499px;
         }
     }
 
@@ -89,17 +98,26 @@
     &__flex {
 
         @include respond-to("small") {
-        display: grid;
-       grid-template-columns: 1fr 1fr;
-       gap: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
-        
+
     }
 
     &__location {
         display: flex;
         gap: 10px;
         margin-bottom: 16px;
+        cursor: pointer;
+
+
+        .paragraph-semibold {
+            &:hover {
+
+                color: $hover-orange;
+            }
+        }
 
 
 
@@ -107,27 +125,42 @@
             margin-bottom: 0;
         }
 
-      
 
-        
+
+
 
         &:last-of-type {
             margin-bottom: 33px;
         }
-    
-}
 
-&__contact-info {
-    margin-bottom: 33px;
-}
+    }
 
-&__flex-right {
-    margin-top: 25px;
-}
+    &__contact-info {
+        margin-bottom: 33px;
+    }
 
-&__location-social {
-    display: flex;
-    margin-top: 33px;
-    gap: 22px;
-}
+    &__flex-right {
+        margin-top: 25px;
+    }
+
+    &__location-social {
+        display: flex;
+        margin-top: 33px;
+        gap: 22px;
+
+        svg {
+            /* Apply hover effect to the svg element */
+            &:hover {
+                /* Select all path elements within the hovered svg */
+                path {
+                    /* Hover fill color */
+                    fill: $hover-orange;
+                }
+            }
+        }
+
+        
+    }
+
+
 }

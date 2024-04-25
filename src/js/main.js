@@ -1,33 +1,63 @@
 import '../sass/style.scss';
-
+/*
+ *  javascript
+ */
 // Code to be executed when the DOM is ready
-document.addEventListener("DOMContentLoaded", function() {
-  
-// console.log(window.screen.width); 
+document.addEventListener("DOMContentLoaded", function () {
+
+  // console.log(window.screen.width); 
+
+  /*
+  *
+  *  Mobile nav
+  *
+  */
+  const hamburgerBtn = document.getElementById("hamburger");
+
+  let html = document.getElementsByTagName('html')[0];
+
+  hamburgerBtn.addEventListener("click", () => {
+
+    // hamburgerBtn.classList.toggle('change');
+    document.getElementById("navigation").classList.toggle("change");
+    // document.getElementById("mobile-navigation").classList.add("change");
+    html.classList.toggle("no-scroll");
+  });
+
+
+
+  AOS.init(
+    {
+      once: true
+    }
+  );
+
+  window.addEventListener("load", AOS.refresh);
+
+
+
+});
+
+/*
+ *  javascript 
+ *   drugi nacin za document ready
+ */
+// (function () {
+
+// })();
+
+
+
 
 
 /*
-*
-*  Mobile nav
-*
-*/
-const hamburgerBtn = document.getElementById("hamburger");
-
-let html = document.getElementsByTagName('html')[0];
-
-hamburgerBtn.addEventListener("click", () => {
- 
-  // hamburgerBtn.classList.toggle('change');
-  document.getElementById("navigation").classList.toggle("change");
-  // document.getElementById("mobile-navigation").classList.add("change");
-  html.classList.toggle("no-scroll");
-} );
+ *  jquery
+ */
+$(document).ready(function () {
 
 
-/* slick slider */
 
-
-$(document).ready(function(){
+  /* slick slider */
   $('.testimonial-slider').slick({
     centerMode: true,
     // centerPadding: '60px',
@@ -55,16 +85,18 @@ $(document).ready(function(){
     //   }
     // ]
   });
-});
 
 
-$(document).ready(function(){
+
+
   $('.gallery-slider').slick({
     centerMode: true,
     // centerPadding: '60px',
     infinite: true,
     slidesToShow: 1,
-    arrows: false,
+    arrows: true,
+    prevArrow: "<button type='button' class='slick-prev'><img src='dist/img/img-home/arrow-right-light.svg'></button>",
+    nextArrow: "<button type='button' class='slick-next'><img src='dist/img/img-home/arrow-right-light.svg'></button>",
     variableWidth: true,
     responsive: [
       {
@@ -73,18 +105,19 @@ $(document).ready(function(){
           variableWidth: false,
         }
       }
-      
+
     ]
   });
+
+
+
+  $('.hamburger').click(function () {
+    $(this).toggleClass('active');
+  });
+
+
 });
 
 
 
 
-
-
-
-
-
-
-}); 

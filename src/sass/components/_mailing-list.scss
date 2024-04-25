@@ -53,6 +53,19 @@
             color: $title-green;
             margin-bottom: 0;
         }
+
+        .svg-button {
+            width: 60%; 
+            @include respond-to("small") {
+                width: 80%;
+            }
+            @include respond-to("medium") {
+                width: 90%;
+            }
+            @include respond-to("large") {
+                width: 100%;
+            }
+        }
     
         input {
             border: none;
@@ -69,8 +82,13 @@
     
             &::placeholder {
                 color: $primary;
-                font-size: 36px;
+                font-size: 30px;
+                line-height: 30px;
+
+                @include respond-to("small") {
+                    font-size: 36px;
                 line-height: 36px;
+                }
             }
     
             &::-webkit-input-placeholder {
@@ -96,11 +114,16 @@
         }
     
         &:hover input::placeholder {
-            color:  #F8A13C; /* Placeholder text color on hover */
+            color:  $hover-orange; /* Placeholder text color on hover */
         }
     
         &:hover .svg-button circle {
-            fill:  #F8A13C; /* SVG circle color on hover */
+            fill:  $hover-orange; /* SVG circle color on hover */
+           
+        }
+
+        &:hover path {
+            fill:$primary;
         }
     }
     

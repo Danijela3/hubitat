@@ -18,18 +18,25 @@
 // }
 
 .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: $border-color;
+    @include respond-to("small") {
     padding-top: 60px;
     padding-bottom: 40px;
-    border-top: $border-color;
+   
+    }
 
     &__grid {
 
         @include respond-to("small") {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        
         }
 
-        @include respond-to("small") {
+        @include respond-to("large") {
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 70px;
             }
         
@@ -54,12 +61,22 @@
         a {
             margin-right: 27px;
             white-space: nowrap;
+
+            &:hover {
+                color: $hover-orange;
+            }
         }
     }}
 
     &__grid-column {
-        img {
+        svg {
             margin-right: 30px;
+
+            &:hover {
+                path {
+                    fill: $hover-orange;
+                }
+            }
         }
     }
 
@@ -81,10 +98,28 @@
         }
     }
 
+    &__grid-column3 {
+
+        @include respond-to("small") {
+        display: none;
+        }
+
+        @include respond-to("large") {
+            display: block;
+            }
+svg {
+    margin-right: 30px;
+}
+    }
+
     &__address {
         margin-bottom: 20px;
         @include respond-to("small") {
             margin-bottom: 0;
+        }
+
+        a:hover {
+            color: $hover-orange;
         }
     }
 
@@ -93,10 +128,36 @@
         @include respond-to("small") {
             margin-bottom: 0;
         }
+
+        a:hover {
+            color: $hover-orange;
+        }
     }
 
     .paragraph-regular {
         margin-top: 0;
+
+        
     }
+
+    .paragraph-small {
+        display: none;
+
+        @include respond-to("small") {
+            display: block;
+        }
+    &.hidden--paragraph {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        @include respond-to("small") {
+            display: none;
+        }
+
+        @include respond-to("large") {
+            // display: block;
+        }
+    }}
 
 }

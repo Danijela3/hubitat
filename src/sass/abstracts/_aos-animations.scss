@@ -1,0 +1,54 @@
+[data-aos="fade-custom"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+  
+    &.aos-animate {
+      opacity: 1;
+    }
+  
+    @media screen and (min-width: 768px) {
+      transform: translateX(100px);
+  
+      &.aos-animate {
+        transform: translateX(0);
+      }
+    }
+  }
+
+
+  [data-aos="fade-mobile"] {
+  
+   
+    @media screen and (max-width: 768px) {
+        opacity:1 !important;
+        transition-property: all !important;
+        transition-delay: 0.5s;
+        transition-timing-function: ease;
+        transition-duration:0.3s;
+  
+        &.aos-animate {
+          background: #F7E900;
+          
+        }
+
+    }
+  }
+
+  [data-aos="text-color-change"] {
+  
+   
+    @media screen and (max-width: 768px) {
+        opacity:1 !important;
+        transition-property: color !important;
+        transition-delay: 0.6s;
+        transition-timing-function: ease !important;
+        transition-duration:0.3s !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+       
+  
+        &.aos-animate {
+          color: $primary !important;
+          
+        }
+    }
+  }

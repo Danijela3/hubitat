@@ -23,3 +23,7 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+.no-scroll {
+    overflow-y: hidden;
+}
