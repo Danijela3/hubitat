@@ -365,7 +365,13 @@
                 max-width: 400px;
                 display: flex;
                 margin-left: auto;
-                margin-top: 146px;
+                margin-top: 40px;
+            }
+        }
+
+        @include respond-to("medium") {
+            .paragraph-regular {
+            margin-top: 146px;
             }
         }
     }
@@ -393,6 +399,12 @@
         margin-top: 100px;
         column-gap: 25px;
         row-gap: 40px;
+    }
+
+    .h2 {
+        @include respond-to("medium") {
+            margin-bottom: 30px;
+        }
     }
 }
 

@@ -109,6 +109,11 @@
             }
 svg {
     margin-right: 30px;
+    &:hover {
+        path {
+            fill: $hover-orange;
+        }
+    }
 }
     }
 
@@ -159,5 +164,22 @@ svg {
             // display: block;
         }
     }}
+
+    &__soc-media {
+        display: none;
+
+        @include respond-to('small') {
+            display: block;
+
+            svg {
+                margin-right: 30px;
+
+               
+            }
+        }
+        @include respond-to('large') {
+            display: none;
+        }
+    }
 
 }

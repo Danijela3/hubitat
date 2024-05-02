@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   AOS.init(
     {
-      once: true
+      once: true,
+      duration: 600,
     }
   );
 
